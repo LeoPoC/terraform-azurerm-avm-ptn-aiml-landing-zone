@@ -35,6 +35,6 @@ module "apim" {
   tenant_access                 = var.apim_definition.tenant_access
   virtual_network_subnet_id     = null
   virtual_network_type          = "None"
-  zones                         = startswith(var.apim_definition.sku_root, "Premium") ? local.region_zones : []
+  zones                         = startswith(var.apim_definition.sku_root, "Premium") ? local.region_zones : null
 }
 
